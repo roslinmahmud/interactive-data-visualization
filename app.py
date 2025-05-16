@@ -8,7 +8,7 @@ import plotly.graph_objects as go
 st.set_page_config(page_title="Gapminder Data Visualization", layout="wide")
 
 # Page title
-st.title("Gapminder Data Visualization")
+st.title("Global Health Trends Data Visualization")
 
 # Load datasets
 gapminder = px.data.gapminder()
@@ -85,7 +85,7 @@ fig_scatter = px.scatter(
     log_x=True,
     range_x=[100, 100000],
     range_y=[0, 400],
-    labels={"pop": "Population", "gdpPercap": "GDP per Capita", "childMortality": "Child Mortality"}
+    labels={"pop": "Population", "gdpPercap": "GDP per Capita", "childMortality": "Child Mortality(per 1,000 births)"},
 )
 st.plotly_chart(fig_scatter, use_container_width=True)
 
